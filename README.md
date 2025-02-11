@@ -1,85 +1,143 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Clean Code Kata - E-commerce Order Processing
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the Clean Code Kata! This project is designed to help developers practice identifying and fixing common violations of clean code and SOLID principles in a realistic NestJS application.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🎯 Purpose
 
-## Description
+This kata contains intentionally written "bad code" that violates various clean code and SOLID principles. Your mission is to identify these violations and refactor the code to follow best practices. The project simulates a simple e-commerce system with user management, product inventory, and order processing.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🧪 Clean Code Principles
 
-## Project setup
+Before starting the kata, familiarize yourself with these key principles:
 
-```bash
-$ pnpm install
-```
+1. **Meaningful Names**
+    - Variables, functions, and classes should have clear, pronounceable names
+    - Avoid single-letter names or cryptic abbreviations
+    - Names should reveal intent
 
-## Compile and run the project
+2. **Functions**
+    - Should be small and do one thing well (Single Responsibility)
+    - Ideally fewer than 20 lines
+    - Should have descriptive names
+    - Should have 3 or fewer parameters
 
-```bash
-# development
-$ pnpm run start
+3. **Comments & Documentation**
+    - Code should be self-documenting
+    - Comments should explain WHY, not WHAT
+    - Keep comments meaningful and up-to-date
 
-# watch mode
-$ pnpm run start:dev
+4. **Code Structure & Formatting**
+    - Consistent indentation and spacing
+    - Related code should be grouped together
+    - Follow established team conventions
 
-# production mode
-$ pnpm run start:prod
-```
+5. **Error Handling**
+    - Use exceptions rather than return codes
+    - Don't swallow exceptions
+    - Provide context with exceptions
+    - Define exception classes in terms of a caller's needs
 
-## Run tests
+6. **Unit Tests**
+    - One assert per test
+    - Tests should be fast, independent, repeatable
+    - Follow F.I.R.S.T principles
+    - Test edge cases and error conditions
 
-```bash
-# unit tests
-$ pnpm run test
+7. **SOLID Principles**
+    - Single Responsibility Principle
+    - Open/Closed Principle
+    - Liskov Substitution Principle
+    - Interface Segregation Principle
+    - Dependency Inversion Principle
 
-# e2e tests
-$ pnpm run test:e2e
+## 🚀 Getting Started
 
-# test coverage
-$ pnpm run test:cov
-```
+1. Fork this repository to your GitHub account
+2. Clone your fork locally
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the tests:
+   ```bash
+   npm test
+   ```
 
-## Resources
+## 🎯 Exercise Instructions
 
-Check out a few resources that may come in handy when working with NestJS:
+1. **Identify Violations**: First, go through the codebase and identify as many clean code and SOLID principle violations as you can find. Keep a list of what you find.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+2. **Plan Refactoring**: Before making changes, plan your refactoring approach. Consider:
+    - Which violations are most critical?
+    - What dependencies exist between different parts of the code?
+    - How can you make incremental improvements while keeping the tests passing?
 
-## Support
+3. **Refactor**: Start refactoring the code, focusing on one principle at a time:
+    - Keep the tests running
+    - Make small, incremental changes
+    - Commit frequently with descriptive messages
+    - Add new tests as needed
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+4. **Key Areas to Examine**:
+    - `src/entities/`: Look for poor naming and unnecessary abbreviations
+    - `src/services/order.service.ts`: Check for SRP violations and error handling
+    - `src/controllers/`: Examine error handling and input validation
+    - `src/tests/`: Look for missing test cases and poor test organization
 
-## Stay in touch
+## 🎯 Specific Challenges
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Try to find and fix at least one instance of each:
 
-## License
+1. **Poor Naming**
+    - Single-letter variable names
+    - Unclear abbreviations
+    - Misleading names
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+2. **Function Issues**
+    - Methods that are too long
+    - Methods that do multiple things
+    - Too many parameters
+
+3. **Error Handling Problems**
+    - Swallowed exceptions
+    - Missing error cases
+    - Poor error messages
+
+4. **SOLID Violations**
+    - Classes with multiple responsibilities
+    - Tight coupling between classes
+    - Concrete class dependencies instead of interfaces
+
+5. **Testing Issues**
+    - Missing test cases
+    - Poor test organization
+    - Incomplete coverage
+
+## 💡 Tips
+
+- Run the tests frequently to ensure your changes haven't broken anything
+- Use TypeScript's type system to your advantage
+- Consider extracting interfaces for better abstraction
+- Don't try to fix everything at once
+- Keep the Single Responsibility Principle in mind
+- Add documentation as you refactor
+
+## 🏆 Definition of Done
+
+Your refactored code should:
+
+1. Have clear, meaningful names for all variables, functions, and classes
+2. Have small, focused functions that do one thing well
+3. Handle errors appropriately with meaningful error messages
+4. Follow SOLID principles
+5. Have comprehensive test coverage
+6. Be well-documented
+7. Pass all existing tests and any new tests you've added
+
+## 📝 Submission
+
+Once you've completed the kata:
+
+1. Push your changes to your fork
+2. Create a Pull Request to the original repository
+3. In the PR description,
