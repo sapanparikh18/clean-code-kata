@@ -8,7 +8,7 @@ export class OrderController {
   @Post()
   async createOrder(@Body() orderData: any) {
     try {
-      const result = await this.orderService.processOrder(orderData);
+      const result = await this.orderService.po(orderData);
       if (!result) {
         return { success: false };
       }

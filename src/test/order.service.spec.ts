@@ -63,7 +63,7 @@ describe('OrderService', () => {
       t: 0,
     });
 
-    const result = await service.processOrder(order.id);
+    const result = await service.po(order.id);
     expect(result).toBeDefined();
     expect(result.t).toBe(1000);
   });

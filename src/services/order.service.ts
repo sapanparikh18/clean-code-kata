@@ -18,7 +18,7 @@ export class OrderService {
   ) {}
 
 
-  async processOrder(orderId: string) {
+  async po(orderId: string) {
     const o = await this.orderRepo.findOne({
       where: { id: orderId },
       relations: ['u', 'p']
@@ -55,7 +55,7 @@ export class OrderService {
     return o;
   }
 
-  private calculateTotal(products: Product[]): number {
+  private calculator(products: Product[]): number {
     let t = 0;
     for (let i = 0; i < products.length; i++) {
       const p = products[i];
